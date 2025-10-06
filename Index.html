@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Royal Legendary RP — SA-MP</title>
+  <style>
+    :root{
+      --bg:#0f1724; 
+      --card:#111827; 
+      --accent:#38bdf8; 
+      --muted:#94a3b8; 
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#05070a 0%,#071025 100%);color:#e6eef6; line-height:2;}
+    .container{max-width:1000px;margin:30px auto;padding:30px}
+    header{display:flex;align-items:center;gap:20px; margin-bottom:30px;}
+    .logo{width:64px;height:64px;border-radius:8px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:10px 0 0;color:var(--muted); font-size:16px;}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:30px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:24px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+    .big{font-size:20px;font-weight:700;margin-bottom:12px}
+    .muted{color:var(--muted);font-size:14px;margin:6px 0}
+    .features{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .tag{background:rgba(255,255,255,0.02);padding:8px 14px;border-radius:999px;font-size:14px}
+    button.copy, button.play{background:linear-gradient(90deg,var(--accent),#7dd3fc);border:none;padding:12px 16px;border-radius:10px;cursor:pointer;font-weight:700;color:#0f1724;margin-top:12px}
+    button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 14px;border-radius:10px;cursor:pointer;color:var(--muted);margin-top:12px}
+    .rules{margin-top:16px;line-height:2;font-size:15px}
+    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:14px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.container{padding:20px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">R</div>
+      <div>
+        <h1>Royal Legendary RP</h1>
+        <p class="lead">SA-MP Roleplay • IP: <strong id="server-ip">144.76.57.59:11609</strong></p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <div>
+          <div class="big">Welcome to Royal Legendary RP</div>
+          <div class="muted">Friendly, active community • Custom scripts • Regular events</div>
+        </div>
+
+        <div class="features">
+          <div class="tag">Custom Jobs</div>
+          <div class="tag">Economy</div>
+          <div class="tag">Active Staff</div>
+          <div class="tag">Anti-cheat</div>
+          <div class="tag">Events & Cash Prizes</div>
+        </div>
+
+        <div class="muted" style="margin-top:24px">About</div>
+        <p class="rules">Royal Legendary RP is a community-driven SA-MP server with custom systems and staff-managed events.  
+        We emphasize roleplay, fairness, and a welcoming environment.  
+        Enjoy regular events, unique jobs, and a vibrant community that makes your RP experience unforgettable.  
+        Join today and be part of a legendary roleplay world!</p>
+
+        <div style="display:flex;gap:16px;flex-wrap:wrap; margin-top:20px;">
+          <button class="copy" id="copy-ip">Copy IP</button>
+          <button class="play" id="play-samp">Play</button>
+          <button class="secondary" id="connect-guide">How to join</button>
+          <a class="secondary" href="#rules" style="text-decoration:none;display:inline-flex;align-items:center;padding:10px;border-radius:10px">Rules</a>
+        </div>
+
+        <section id="rules" style="margin-top:24px">
+          <div class="muted">Server rules</div>
+          <ol class="rules">
+            <li>No cheating or exploiting.</li>
+            <li>Respect staff and players; no abusive language.</li>
+            <li>No advertising other servers without permission.</li>
+            <li>Do not share personal info; stay safe.</li>
+          </ol>
+        </section>
+
+        <section style="margin-top:24px">
+          <div class="muted">Screenshots / Media</div>
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <img src="https://www.samp.com/screenshots/samp1.jpg" alt="s1" style="width:260px;height:140px;border-radius:8px;object-fit:cover">
+            <img src="https://www.samp.com/screenshots/samp2.jpg" alt="s2" style="width:120px;height:140px;border-radius:8px;object-fit:cover">
+            <img src="https://www.samp.com/screenshots/samp3.jpg" alt="s3" style="width:120px;height:140px;border-radius:8px;object-fit:cover">
+          </div>
+        </section>
+      </main>
+
+      <aside class="card">
+        <div class="muted">Server IP</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+          <div style="font-weight:700;font-size:16px" id="ip-block">144.76.57.59:11609</div>
+          <div style="text-align:right">
+            <button class="copy" style="padding:10px 12px" id="copy-ip-2">Copy</button>
+          </div>
+        </div>
+
+        <div style="margin-top:24px; font-size:15px;">
+          <strong>By TEC Operations Team</strong>
+        </div>
+
+        <div style="margin-top:24px">
+          <div class="muted">Contact</div>
+          <p class="muted" style="font-size:14px;margin:6px 0">Discord: <strong><a href="https://discord.gg/awBFJQn44Q" style="color:var(--accent);text-decoration:none">Join Discord</a></strong></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Royal Legendary RP • Built by TEC Operations Team
+    </footer>
+  </div>
+
+  <script>
+    const SERVER_IP = '144.76.57.59:11609';
+    document.getElementById('server-ip').textContent = SERVER_IP;
+    document.getElementById('ip-block').textContent = SERVER_IP;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy IP logic
+    function copyIP() {
+      navigator.clipboard?.writeText(SERVER_IP).then(()=>{
+        alert('IP copied: ' + SERVER_IP);
+      }).catch(()=>{ prompt('Copy IP manually:', SERVER_IP); });
+    }
+    document.getElementById('copy-ip').onclick = copyIP;
+    document.getElementById('copy-ip-2').onclick = copyIP;
+
+    // Play button logic - open SA-MP launcher on Play Store
+    document.getElementById('play-samp').onclick = () => {
+      window.open('https://play.google.com/store/apps/details?id=com.sa-mp.launcher', '_blank');
+    };
+
+    // Join instructions modal
+    document.getElementById('connect-guide').onclick = ()=>{
+      alert('How to join:\n1) Open SA-MP client.\n2) Click "Favorites" -> "Add Server".\n3) Paste: ' + SERVER_IP + '\n4) Connect and enjoy!');
+    };
+  </script>
+</body>
+          </html>
